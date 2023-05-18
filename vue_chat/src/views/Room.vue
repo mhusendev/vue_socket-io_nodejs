@@ -128,7 +128,7 @@ export default {
     created: function() {
     this.username = localStorage.getItem('username')   
     this.room = localStorage.getItem('room') 
-     socket= io.connect('http://localhost:3002');
+     socket= io.connect('http://localhost:8020');
     let data = {
         data:this.username,
         room:this.room

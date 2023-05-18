@@ -1,0 +1,15 @@
+version: "3.3"
+services:
+  socket_client:
+    container_name: socket_client
+    build: .
+    volumes:
+      - client_chat:/socket_client
+      - node_modules:/socket_client/node_modules
+
+    ports:
+    - 8010:8010
+    stdin_open: true
+    command: npm run dev
+volumes:
+  node_modules:

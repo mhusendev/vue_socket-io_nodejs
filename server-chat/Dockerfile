@@ -1,7 +1,7 @@
 from node:alpine
-WORKDIR /server_chat
+WORKDIR /socket_server
 COPY ./package.json .
 RUN npm install
 COPY ./ .
-ENTRYPOINT  npm run dev
-EXPOSE 3002
+ENTRYPOINT  npm start
+EXPOSE 8020

@@ -1,13 +1,14 @@
 version: "3.3"
 services:
-  server_chat:
-    container_name: server_chat
+  socket_server:
+    container_name: socket_server
     build: .
     volumes:
-      - server_chat:/server_chat
-      - node_modules:/server_chat/node_modules
+      - server_chat:/socket_server
+      - node_modules:/socket_server/node_modules
 
     ports:
+    - 8020:8020
     stdin_open: true
     command: npm start
 volumes:

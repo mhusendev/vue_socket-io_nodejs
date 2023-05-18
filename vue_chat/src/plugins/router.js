@@ -1,10 +1,10 @@
 import { createRouter, createWebHistory } from 'vue-router'
 
 const routes = [
-    {path:'',name:'home',props: true, component: ()=> import('@/views/home.vue')},
+    {path:'',name:'home',props: true, component: ()=> import('@/iews/Home.vue')},
     {path:'/room',name:'room', props: true,  meta: {
         auth: true
-    }, component: ()=> import('@/views/room.vue')}
+    }, component: ()=> import('@/views/Room.vue')}
 ]
 
 const router = createRouter({
